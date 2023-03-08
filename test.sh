@@ -3,9 +3,9 @@ cd "$(dirname "$0")" # Run always in current dir
 set -euo pipefail # Fail fast
 
 # Unit tests
-#./gradlew :resources:library:test
-#./gradlew :resources:library:desktopTest
+#./gradlew :library:test
+#./gradlew :library:desktopTest
 
 # Android integration tests
-./gradlew :resources:library:pixel5DebugAndroidTest
+./gradlew :library:pixel5DebugAndroidTest
 

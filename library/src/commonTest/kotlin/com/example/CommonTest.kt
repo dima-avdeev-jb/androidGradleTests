@@ -1,3 +1,5 @@
+package com.example
+
 import kotlin.test.Test
 
 class CommonTest {

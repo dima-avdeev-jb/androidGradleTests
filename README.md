@@ -1,5 +1,6 @@
-## Run tests on emulator with gradle
-
+## Run tests on Android emulator with gradle
 `./gradlew :library:pixel5DebugAndroidTest`
 
-`./gradlew library:pixel5Check`
+
+## This test runs on JVM:
+`./gradlew :library:testDebugUnitTest --tests 'CommonTest.testFromCommonTest'`

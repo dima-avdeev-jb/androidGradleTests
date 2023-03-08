@@ -51,6 +51,7 @@ kotlin {
             dependsOn(skikoMain)
             dependsOn(jvmAndAndroidMain)
             dependsOn(commonButJSMain)
+            jvmToolchain(8)
         }
         val desktopTest by getting {
             dependencies {
@@ -133,9 +134,3 @@ dependencies {
 tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
 }
-
-configureMavenPublication(
-    groupId = "org.jetbrains.compose.components",
-    artifactId = "components-resources",
-    name = "Resources for Compose JB"
-)

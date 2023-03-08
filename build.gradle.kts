@@ -14,19 +14,4 @@ allprojects {
 
 subprojects {
     version = findProperty("deploy.version") ?: property("compose.version")!!
-
-    plugins.withId("java") {
-        configureIfExists<JavaPluginExtension> {
-            sourceCompatibility = JavaVersion.VERSION_11
-            targetCompatibility = JavaVersion.VERSION_11
-
-            withJavadocJar()
-            withSourcesJar()
-        }
-    }
-
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>() {
-        kotlinOptions.jvmTarget = "11"
-    }
-
 }
